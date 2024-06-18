@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDD Scheduling Simulation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">HDD Scheduling Simulation</h1>
+        <form id="hddForm" class="mt-4">
+            <div class="form-group">
+                <label for="lowerLimit">Lower Limit:</label>
+                <input type="number" id="lowerLimit" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="upperLimit">Upper Limit:</label>
+                <input type="number" id="upperLimit" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="startPoint">Start Point:</label>
+                <input type="number" id="startPoint" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="requestPoints">Request Points (comma separated):</label>
+                <input type="text" id="requestPoints" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="algorithm">Scheduling Algorithm:</label>
+                <select id="algorithm" class="form-control" required>
+                    <option value="fcfs">FCFS</option>
+                    <option value="scan">SCAN</option>
+                    <option value="cscan">C-SCAN</option>
+                    <option value="look">LOOK</option>
+                    <option value="clook">C-LOOK</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Simulate</button>
+        </form>
+        <div id="output" class="mt-4"></div>
+        <canvas id="seekChart" class="mt-4"></canvas>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
